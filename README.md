@@ -4,7 +4,7 @@ Simple python program to extract data from logs
 ### Prerequisites:
 
 - Python 3.8
-- Poetry dependencies installed
+- Poetry (https://python-poetry.org/)
 
 ### Installation:
 
