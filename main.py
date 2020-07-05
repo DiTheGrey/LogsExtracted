@@ -10,10 +10,10 @@ d = {}
 
 
 def process_request_for_service(begin: dict, end: dict):
-    service = data.get('service')
+    service = end.get('service')
 
     t1 = parse(begin.get('ts'))
-    t2 = parse(data.get('ts'))
+    t2 = parse(end.get('ts'))
 
     result = t2 - t1
     service_stats.setdefault(service, [])
