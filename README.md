@@ -1,9 +1,9 @@
 # LogsExtracted
 Simple python program to extract data from logs
 
-Prerequisites:
--Python 3.8
--Poetry dependencies installed
+Prerequisites: 
+- Python 3.8
+- Poetry dependencies installed
 
 Installation:
 poetry install
