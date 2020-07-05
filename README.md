@@ -1,20 +1,39 @@
 # LogsExtracted
 Simple python program to extract data from logs
 
+### Prerequisites:
 
-To use this script you need to have Python 3.8 installed.
+- Python 3.8
+- Poetry (https://python-poetry.org/)
 
-Also install dependencies using poetry.lock
+### Installation:
 
-Command: poetry install
+    poetry install
 
-Script runs with usage of test.log
+### How to run:
+
+    python3 main.py
+
+Script runs with usage of `test.log`
+
 If you need to parse other logs - place them near script and rename it to test.log
 
-Format of logs that can be parsed:
-2015-10-28T12:24:33,903 TRACE [OperImpl] entry with (addClient:97900)
+Parsable logs example:
+
+    2015-10-28T12:24:33,903 TRACE [OperImpl] entry with (addClient:97900)
+
+### Design
+
+Program uses follwing GROK pattern to recognize logs:
+
+    %{TIMESTAMP_ISO8601:ts} TRACE \[%{WORD:name}\] .* \(%{WORD:service}\:%{NUMBER:req_id}\)
 
 Results show:
+
 1) Name of service
 2) How many times it was executed
 3) Max execution time
+
+Sample output:
+
+    service: addClient | req_num: 1 | max-time: 0:00:00.099000
