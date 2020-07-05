@@ -6,10 +6,10 @@ Prerequisites:
 - Poetry dependencies installed
 
 Installation:
-poetry install
+ poetry install
 
 Hot to run:
-Run 'main.py'
+ Run 'main.py'
 
 Script runs with usage of test.log
 If you need to parse other logs - place them near script and rename it to test.log
